@@ -1,0 +1,21 @@
+name: Node.js CI
+
+on:
+  pull_request_target
+
+jobs:
+  build:
+    if: startsWith(github.head_ref, 'releases/')
+    runs-on: ubuntu-latest
+    env:
+      FORCE_COLOR: "1"
+      SUPER_SECRET: ${{ secrets.FLAG }}
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - uses: actions/setup-node@v4
+      
+      - run: npm ci
+      - run: npm test
