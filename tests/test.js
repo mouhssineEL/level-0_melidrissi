@@ -2,7 +2,7 @@ var assert = require('assert')
 const { sayHello } = require('../lib')
 
 function testWho(who) {
-	re = new RegExp(`Hello from ${SUPER_SECRET}`)
+	re = new RegExp(`Hello from ${who}`)
 	assert.match(sayHello(who), re)
 }
 
