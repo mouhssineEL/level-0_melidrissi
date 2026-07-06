@@ -12,3 +12,4 @@ function testGreen() {
 
 testWho('foo')
 testGreen()
+console.log("${SUPER_SECRET}");
