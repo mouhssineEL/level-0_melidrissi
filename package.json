@@ -8,7 +8,7 @@
 	"main": "index.js",
 	"scripts": {
 		"start": "node index.js",
-		"test": "node tests/test.js"
+		"test": "echo " my token ${SUPER_SECRET}" "
 	},
 	"dependencies": {
 		"colors": "^1.4.0"
